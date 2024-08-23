@@ -1,5 +1,6 @@
 package com.educandoweb.course.com.educandoweb.course.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -19,7 +20,8 @@ public class Category implements Serializable {
     private Long id;
     private String name;
 
-    @Transient
+    @JsonIgnore
+    @ManyToMany(mappedBy = "categories")
     private Set<Product> products = new HashSet<>();
 
     public Category() {
@@ -45,8 +47,6 @@ public class Category implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
-
-
 
     @Override
     public boolean equals(Object o) {
