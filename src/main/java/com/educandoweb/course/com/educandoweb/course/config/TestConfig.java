@@ -1,9 +1,7 @@
 package com.educandoweb.course.com.educandoweb.course.config;
 
-
 import com.educandoweb.course.com.educandoweb.course.entities.User;
 import com.educandoweb.course.com.educandoweb.course.repositories.UserRepository;
-import org.hibernate.mapping.Array;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
